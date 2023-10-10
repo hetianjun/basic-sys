@@ -1,0 +1,11 @@
+
+server:
+  port: 8000
+#  port: ${random.int(6100,6200)}
+
+log:
+  level: info
+logging:
+  level:
+    com.tjun: debug
+

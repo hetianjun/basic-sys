@@ -7,10 +7,19 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="basic-sysadmin" />
         <module name="basic-comm" />
-        <module name="basic-admin" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="8" />
+    <bytecodeTargetLevel target="8">
+      <module name="basic-admin" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="basic-admin" options="-parameters" />
+      <module name="basic-comm" options="-parameters" />
+      <module name="basic-sysadmin" options="-parameters" />
+    </option>
   </component>
 </project>
